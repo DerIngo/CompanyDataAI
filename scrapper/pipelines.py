@@ -12,6 +12,8 @@ import json
 class MongoPipeline:
 
     def __init__(self):
+        import os
+        print(os.getcwd())
         # Lade Konfiguration aus der JSON-Datei
         with open('config.json') as config_file:
             config = json.load(config_file)

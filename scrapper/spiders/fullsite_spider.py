@@ -1,5 +1,5 @@
 import scrapy
-from firmendaten.cleaner import clean_html_content
+from scrapper.cleaner import clean_html_content
 
 class FullSiteSpider(scrapy.Spider):
     name = "fullsite"
