@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST">
+    <label for="question">Stelle eine Frage:</label><br>
+    <textarea name="question" id="question" rows="4" placeholder="Welche Dienstleistungen bietet die Firma an?"></textarea><br>
+    <button type="submit">Frage absenden</button>
+</form>
+{% endblock %}
