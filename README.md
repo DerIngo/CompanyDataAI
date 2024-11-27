@@ -17,12 +17,24 @@ pip install -r requirements.txt
 docker stop CompanyDataAI-mongo && docker rm CompanyDataAI-mongo
 docker run --name CompanyDataAI-mongo -d -p 27017:27017 mongo
 ```
-4. Create Index
+4. Scrap pages
+```bash
+cd scrapper
+scrapy crawl fullsite
+```
+5. Create Index
 Open Mongo Client and execute:
 ```bash
+use firmendaten
 db.fullsite.dropIndexes();
 db.fullsite.createIndex(
   { cleaned_text: "text" },  // Das Feld, das durchsucht werden soll
   { default_language: "german" }  // Sprache für den Textindex
 );
 ```
+6. local AI
+Start server in LM Studio with Model [mradermacher/Teuken-7B-instruct-commercial-v0.4-GGUF/Teuken-7B-instruct-commercial-v0.4.Q8_0.gguf](https://huggingface.co/mradermacher/Teuken-7B-instruct-commercial-v0.4-i1-GGUF).
+Set Context Lenght to 4096.
+![LM Studio](resources/screenshot.png "LM Studio")
+7. configure local AI in project
+I run LM Studio on Windows, but webapp on WSL. So the IP of Windows environment has to be set in file ```webapp/app.py```, because ```localhost``` is not working in this setup.
