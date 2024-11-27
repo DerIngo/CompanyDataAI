@@ -1,6 +1,9 @@
 # virtual environment folder
 CompanyDataAI
 
+# ignore my test folder
+lmstudio/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
