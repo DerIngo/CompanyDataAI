@@ -32,9 +32,11 @@ db.fullsite.createIndex(
   { default_language: "german" }  // Sprache für den Textindex
 );
 ```
-6. local AI
-Start server in LM Studio with Model [mradermacher/Teuken-7B-instruct-commercial-v0.4-GGUF/Teuken-7B-instruct-commercial-v0.4.Q8_0.gguf](https://huggingface.co/mradermacher/Teuken-7B-instruct-commercial-v0.4-i1-GGUF).
+
+6. local AI\
+Start server in LM Studio with Model [mradermacher/Teuken-7B-instruct-commercial-v0.4-GGUF/Teuken-7B-instruct-commercial-v0.4.Q8_0.gguf](https://huggingface.co/mradermacher/Teuken-7B-instruct-commercial-v0.4-i1-GGUF).\
 Set Context Lenght to 4096.
 ![LM Studio](resources/screenshot.png "LM Studio")
-7. configure local AI in project
+
+7. configure local AI in project\
 I run LM Studio on Windows, but webapp on WSL. So the IP of Windows environment has to be set in file ```webapp/app.py```, because ```localhost``` is not working in this setup.
