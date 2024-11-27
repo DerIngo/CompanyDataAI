@@ -1,0 +1,6 @@
+scrapy
+pymongo
+beautifulsoup4
+langdetect
+openai
+flask
