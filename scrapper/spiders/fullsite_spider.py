@@ -4,6 +4,7 @@ from scrapper.cleaner import clean_html_content
 class FullSiteSpider(scrapy.Spider):
     name = "fullsite"
     allowed_domains = [
+        "dataciders.com",
         "catenate.com",
         "cth-bi.de",
         "datalytics-consulting.com",
@@ -17,6 +18,7 @@ class FullSiteSpider(scrapy.Spider):
     ]
 
     start_urls = [
+        "https://dataciders.com/",
         "https://catenate.com/",
         "https://cth-bi.de/",
         "https://datalytics-consulting.com/",
