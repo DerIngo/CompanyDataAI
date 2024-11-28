@@ -1,8 +1,9 @@
 # virtual environment folder
-CompanyDataAI
+CompanyDataAI/*
 
 # ignore my test folder
 lmstudio/*
+testMongoDB.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
